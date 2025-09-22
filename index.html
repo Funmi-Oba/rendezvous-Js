@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rendezvous</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="m-0 p-0">
+    <header
+      style="background-image: url('images/rendezvous-bg.jpg')"
+      class="min-h-screen bg-cover bg-center flex flex-col"
+    >
+      <nav class="pt-6">
+        <div
+          class="bg-[#FFFFFF]/60 min-h-[50px] mx-6 grid grid-cols-3 items-center px-8 py-3 rounded-lg"
+        >
+          <div class="w-full flex justify-start">
+            <a href="index.html" class="no-underline">
+              <h1 class="text-[#432361] text-xl font-bold">rendezvous</h1>
+            </a>
+          </div>
+
+          <div class="w-full flex justify-center">
+            <ul class="flex space-x-6">
+              <li>
+                <a
+                  href="#"
+                  class="text-[#432361] font-semibold hover:text-white"
+                  >Discover</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#432361] font-semibold hover:text-white"
+                  >About us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#432361] font-semibold hover:text-white"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#432361] font-semibold hover:text-white"
+                  >Contact us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex justify-end space-x-6">
+            <a
+              href="#"
+              class="no-underline text-[#432361] px-4 py-2 font-semibold hover:text-white"
+            >
+              Log in</a
+            >
+            <a
+              href="#"
+              class="no-underline text-white bg-[#432361] hover:bg-white hover:text-[#432361] animate-pulse transition-transform hover:scale-105 hover:animate-none px-4 py-2 font-semibold rounded-lg"
+            >
+              Sign up</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <div class="grid flex-grow grid-cols-2 items-end pb-12 px-8">
+        <div>
+          <h2 class="text-white text-[28px] font-semibold max-w-md">
+            Ready to Rock? Discover the Hottest Events Here — Your Calendar's
+            New Best Friend!
+          </h2>
+        </div>
+        <div
+          class="bg-white rounded-xl px-8 py-4 space-x-8 flex items-center max-w-2xl"
+        >
+          <div class="flex flex-grow items-center space-x-2">
+            <span>
+              <img src="images/icons/Search.svg" alt="search" />
+            </span>
+            <input
+              type="text"
+              placeholder="Search for an event"
+              class="flex-grow outline-none text-gray-700"
+            />
+          </div>
+          <div class="h-6 w-px bg-gray-400"></div>
+          <div class="flex items-center">
+            <select  class="text-gray-600 bg-white border border-gray-300 px-3 py-2 rounded-lg hover:border-[#783EAD] focus:ring-[#783EAD]">
+              <option class="hover:bg-[#783EAD]">Categories</option>
+              <option class="hover:bg-[#783EAD]">Music</option>
+              <option>Sports</option>
+              <option>Arts</option>
+              <option>Tech</option>
+              <option>Food & Drink</option>
+              <option>Health & Wellness</option>
+            </select>
+            <button
+              class="bg-[#783EAD] hover:bg-purple-900 text-white ml-4 px-6 py-2 font-semibold rounded-xl"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="px-8 py-12">
+        <div class="flex justify-between items-center w-full">
+          <h2 class="font-semibold text-2xl">Trending events</h2>
+          <a href="event.html" class="no-underline cursor-pointer">
+            <div class="flex items-center gap-1">
+              <p class="text-[#432361] text-sm font-semibold">
+                View all trending events
+              </p>
+              <span><img src="images/icons/Arrow--up-right.svg" /></span>
+            </div>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-8">
+          <div
+            class="rounded-lg shadow-lg border border-1 border-[#E0E0E0] aspect-[3/4] relative overflow-hidden"
+          >
+            <div class="h-60">
+              <img
+                src="/images/event1.png"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="bg-white absolute w-full bottom-0 p-4">
+              <h3 class="text-lg font-bold">ISWIS Live show</h3>
+              <p class="text-sm pb-4">Sun, Oct 3rd &#8226; 6pm</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <a href="event.html" class="no-underline cursor-pointer">
+            <div class="flex items-center gap-1">
+              <p class="text-[#432361] text-sm py-4 font-semibold">
+                View details
+              </p>
+              <span><img src="images/icons/Arrow--up-right.svg" /></span>
+            </div>
+          </a>
+            </div>
+          </div>
+          <div
+            class="rounded-lg shadow-lg border border-1 border-[#E0E0E0] aspect-[3/4] relative overflow-hidden"
+          >
+            <div class="h-60">
+              <img
+                src="/images/event2.jpg"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="bg-white absolute w-full bottom-0 p-4">
+              <h3 class="text-lg font-bold">ISWIS Live show</h3>
+              <p class="text-sm pb-4">Sun, Oct 3rd &#8226; 6pm</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+                 <a href="event.html" class="no-underline cursor-pointer">
+            <div class="flex items-center gap-1">
+              <p class="text-[#432361] text-sm py-4 font-semibold">
+                View details
+              </p>
+              <span><img src="images/icons/Arrow--up-right.svg" /></span>
+            </div>
+          </a>
+            </div>
+          </div>
+          <div
+            style="background-image: url('images/event3.png')"
+            class="bg-cover bg-center rounded-lg shadow-lg border border-1 border-[#E0E0E0] aspect-[3/4] relative overflow-hidden"
+          >
+            <div class="bg-white absolute w-full bottom-0 p-4">
+              <h3 class="text-lg font-bold">ISWIS Live show</h3>
+              <p class="text-sm pb-4">Sun, Oct 3rd &#8226; 6pm</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+                 <a href="event.html" class="no-underline cursor-pointer">
+            <div class="flex items-center gap-1">
+              <p class="text-[#432361] text-sm py-4 font-semibold">
+                View details
+              </p>
+              <span><img src="images/icons/Arrow--up-right.svg" /></span>
+            </div>
+          </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-8 py-8 h-[650px]">
+        <div class="grid grid-cols-3 gap-8">
+          <div class="col-span-1">
+            <h2 class="text-3xl py-2">
+              Discover a World of Events Tailored Just for You.
+            </h2>
+            <button
+              class="bg-[#783EAD] hover:bg-purple-900 py-2 px-4 text-white text-sm rounded-lg"
+            >
+              View all events
+            </button>
+          </div>
+          <div class="col-span-2 grid grid-cols-2 gap-4">
+            <div class="relative h-60 rounded-xl overflow-hidden">
+              <img
+                src="images/online-event.jpg"
+                class="h-full w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/50"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-white text-sm font-semibold">Online Events</p>
+              </div>
+            </div>
+            <div class="relative h-60 rounded-xl overflow-hidden">
+              <img
+                src="images/physical-event.jpg"
+                class="h-full w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/50"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-white text-sm font-semibold">Physical Events</p>
+              </div>
+            </div>
+            <div class="relative h-60 rounded-xl overflow-hidden">
+              <img
+                src="images/hybrid-event.jpg"
+                class="h-full w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/50"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-white text-sm font-semibold">Hybrid Events</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#432361] text-white">
+      <div class="px-8 py-12 grid grid-cols-4">
+        <div class="col-span-2">
+          <h2 class="text-2xl font-bold pb-4">rendezvous</h2>
+          <p class="text-sm max-w-2xs">
+            Your Personal Event Sherpa: Curating Awesome, One Click at a Time.
+          </p>
+        </div>
+        <div class="col-span-2 grid grid-cols-3">
+          <div>
+            <h2 class="font-bold pb-2">Feature</h2>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:underline">Events Discovery</a></li>
+              <li><a href="#" class="hover:underline">Ticketing</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <h2 class="font-bold pb-2">Company</h2>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:underline">About us</a></li>
+              <li><a href="#" class="hover:underline">FAQs</a></li>
+              <li><a href="#" class="hover:underline">Careers</a></li>
+              <li><a href="#" class="hover:underline">Support</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <h2 class="font-bold pb-2">Contact</h2>
+            <ul class="space-y-2 text-sm">
+              <li>info@events.com</li>
+              <li>+234 701 345 6789</li>
+              <li>
+                Race Course, 8/9 Marina, Onikan, Lagos Lagos, 4aa Force Rd,
+                Lagos Island 102273, Lagos
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
