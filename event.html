@@ -7,8 +7,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
+  
+    <script type="module" defer src="event.js"></script>
     
-    </script>
+
+
     <header class="min-h-screen bg-center flex flex-col">
       <nav class="pt-6">
         <div
@@ -70,7 +73,7 @@
       </nav>
       <div class="px-8 py-4">
         <div class="rounded-2xl overflow-hidden">
-          <img src="images/ladies.png" class="w-full h-120 object-cover" />
+          <img id="image" src="" class="w-full h-120 object-contain" />
         </div>
       </div>
     </header>
@@ -78,27 +81,33 @@
       <section class="px-8 py-8">
         <div class="grid grid-cols-3">
           <div class="col-span-2">
-            <h1 class="font-bold text-lg mb-4">I said what I said Live Show</h1>
+            <h1 id="title" class="font-bold text-lg mb-4">I said what I said Live Show</h1>
             <div class="flex items-center gap-1">
-              <span><img src="images/icons/Calendar.svg" /></span>
-              <p class="text-xs font-normal">Sunday, October 3rd, 2023</p>
-              <span class="pl-4"><img src="images/icons/Time.svg" /></span>
-              <p class="text-xs font-normal">6pm</p>
+              
+              <p id="price" class="text-xl font-bold text-green-500" ></p>
+              
+              <!-- <span class="pl-4"><img src="images/icons/Time.svg" /></span>
+              <p class="text-xs font-normal">6pm</p> -->
             </div>
+            <button
+              class="bg-[#783EAD] text-white px-4 py-2 rounded-2xl text-sm hover:bg-[#432361]"
+            >
+              Add to cart
+            </button>
             <div class="flex items-center gap-1 mt-1">
-              <span><img src="images/icons/Location.svg" /></span>
-              <p class="text-xs font-normal">
+              <!-- <span><img src="images/icons/Location.svg" /></span> -->
+              <p id="category" class="text-xs font-normal">
                 Race Course, 8/9 Marina, Onikan, Lagos Lagos, 4aa Force Rd,
                 Lagos Island 102273, Lagos
               </p>
             </div>
-            <div class="flex items-center gap-1 mt-1">
+            <!-- <div class="flex items-center gap-1 mt-1">
               <span><img src="images/icons/User.svg" /></span>
               <p class="text-xs font-normal">FK, Jollz</p>
-            </div>
+            </div> -->
           </div>
           <div class="col-span-1 flex flex-col items-start">
-            <h3 class="font-semibold text-sm mb-4 mt-12">Contact Organizers</h3>
+            <h3 class="font-semibold text-sm mb-4 mt-12">Contact vendor</h3>
             <div class="flex gap-4">
               <img src="images/icons/mail.svg" />
               <img src="images/icons/twitter.svg" />
@@ -111,8 +120,8 @@
         <div class="grid grid-cols-3">
           <div class="col-span-2">
             <div>
-              <h3 class="font-bold text-lg pb-4">Event description</h3>
-              <p class="text-sm font-normal max-w-2xl leading-6">
+              <h3 class="font-bold text-lg">Product description</h3>
+              <p id="description" class="text-sm font-normal mb-6 max-w-2xl leading-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -137,7 +146,7 @@
                 mollit anim id est laborum.
               </p>
             </div>
-            <div>
+            <!-- <div>
               <h3 class="font-bold text-md pb-4 mt-6">Tickets Pricing</h3>
               <div class="grid grid-cols-2 mb-6 max-w-2xs">
                 <div>
@@ -149,15 +158,11 @@
                   <p class="text-[#9B51E0] font-semibold text-sm">NGN 9,000</p>
                 </div>
               </div>
-            </div>
-            <button
-              class="bg-[#783EAD] text-white px-8 py-2 rounded-2xl text-sm hover:bg-[#432361]"
-            >
-              Buy now
-            </button>
+            </div> -->
+            
           </div>
           <div class="col-span-1">
-            <h3 class="font-bold text-lg pb-4">Directions</h3>
+            <h3 class="font-bold text-lg pb-4">Direction to physical store</h3>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9198646335085!2d3.3494679731228154!3d7.135265415755893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a4b90bd83914b%3A0xed067bb54f4970d!2sJune%2012%20Cultural%20Centre%20Abeokuta!5e0!3m2!1sen!2sng!4v1758562539654!5m2!1sen!2sng"
               width="100%"

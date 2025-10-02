@@ -13,7 +13,7 @@ export class Product {
   }
 }
 const url = "https://fakestoreapi.com/products";
-class ProductService {
+export class ProductService {
   #handlePromise = async ({ url, method = "GET", body = null }) => {
     const response = await fetch(`https://fakestoreapi.com/products/${url}`, {
       method,
@@ -24,12 +24,12 @@ class ProductService {
 
   getProducts = async () => {
     const response = await this.#handlePromise({ url: "" });
-    console.log(response);
+   // console.log(response);
     return response;
   };
   getProductById = async (id) => {
     const response = await this.#handlePromise({ url: id });
-    console.log(response);
+    //console.log(response);
     return response;
   };
   addProduct = async () => {
@@ -41,12 +41,12 @@ class ProductService {
       category: "electronic",
     };
     const response = await this.#handlePromise({url: '', method: 'POST', body: product});
-    console.log(response);
+    ///console.log(response);
     return response;
   };
   deleteProduct = async (id) => {
     const response = await this.#handlePromise({url: id, method: 'DELETE'});
-  console.log(`Product with id ${id} has been deleted`, response);
+ // console.log(`Product with id ${id} has been deleted`, response);
   return response;
   }
   updateProduct = async (id) => {
@@ -55,7 +55,7 @@ class ProductService {
       price: 15.0,
   }
     const response = await this.#handlePromise({url: id, method: 'PUT', body: updatedProduct});
-    console.log(`Product with id ${id} has been updated`, response);
+   // console.log(`Product with id ${id} has been updated`, response);
     return response;
 }
 }
@@ -65,13 +65,14 @@ class ProductService {
 const eventContainer = document.getElementById ("event-container");
 const createProductCard = (product) => {
   const card1 = document.createElement("div");
+  card1.addEventListener("click", () => {window.location.href = `event.html?productId=${product.id}`});
   card1.className =
     "rounded-lg shadow-lg border border-1 border-[#E0E0E0] aspect-[3/4] relative overflow-hidden";
   const imageContainer = document.createElement("div");
   imageContainer.className = "h-80";
   const image = document.createElement("img");
   image.src = product.image;
-  image.className = "w-full h-full object-cover";
+  image.className = "w-full h-full object-contain p-4";
   imageContainer.appendChild(image);
   card1.appendChild(imageContainer);
   eventContainer.appendChild(card1);
@@ -87,7 +88,7 @@ const createProductCard = (product) => {
   description.className = "text-sm text-gray-600";
   description.textContent = product.description.slice(0, 200) + "...";
   const viewEventLink = document.createElement("a");
-  viewEventLink.href = "#";
+  viewEventLink.href = "event.html?productId=" + product.id;
   viewEventLink.className = "no-underline cursor-pointer";
   const viewEventdiv = document.createElement("div");
   viewEventdiv.className = "flex items-center gap-1";
@@ -118,7 +119,7 @@ productService.getProductById(6);
 
 const displayProducts = async () => {
   const products = await productService.getProducts();
-  console.log("Products response:", products);
+ // console.log("Products response:", products);
     eventContainer.innerHTML = "";
   products.slice(0,6).forEach((product) => {
     createProductCard(product)
